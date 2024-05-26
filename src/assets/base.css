@@ -1,0 +1,112 @@
+:root {
+--vt-c-white: #ffffff;
+--vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #07071c;
+  --vt-c-black-soft: #283148;
+  --vt-c-black-mute: #404b68;
+
+  --vt-c-indigo: #8d43ad;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project  */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-indigo);
+  --color-text: var(--vt-c-indigo);
+
+  --section-gap: 160px;
+
+  --color-background-dark: var(--vt-c-black);
+  --color-background-soft-dark: var(--vt-c-black-soft);
+  --color-background-mute-dark: var(--vt-c-black-mute);
+
+  --color-border-dark: var(--vt-c-divider-dark-2);
+  --color-border-hover-dark: var(--vt-c-divider-dark-1);
+
+  --color-heading-dark: var(--vt-c-white);
+  --color-text-dark: var(--vt-c-text-dark-2);
+
+  color-scheme: light dark;
+}
+
+@font-face {
+  font-family: 'GameOfThrones';
+  src: url('@/assets/fonts/Game Of Thrones.ttf') format('truetype');
+}
+
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  color: light-dark(var(--color-text) var(--color-text-dark));
+  background: light-dark(var(--color-background) var(--color-background-dark));
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  font-family:
+    'GameOfThrones',
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
