@@ -65,7 +65,7 @@
 
 @font-face {
   font-family: 'GameOfThrones';
-  src: url('@/assets/fonts/Game-Of-Thrones.ttf') format('truetype');
+  src: url('@/assets/fonts/GameOfThrones.woff2') format('woff2');
 }
 
 * {
