@@ -1,13 +1,21 @@
 :root {
---vt-c-white: #ffffff;
---vt-c-white-soft: #f8f8f8;
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
 
-  --vt-c-black: #07071c;
-  --vt-c-black-soft: #283148;
-  --vt-c-black-mute: #404b68;
+  --vt-c-black: #0f0f0f;
+  --vt-c-black-soft: #1a1a1a;
+  --vt-c-black-mute: #2d2d2d;
 
-  --vt-c-indigo: #8d43ad;
+  /* Colores de Game of Thrones */
+  --got-gold: #d4af37;
+  --got-gold-dark: #b8860b;
+  --got-silver: #c0c0c0;
+  --got-silver-dark: #a8a8a8;
+  --got-iron: #4a4a4a;
+  --got-iron-light: #6a6a6a;
+  --got-blood: #8b0000;
+  --got-night: #1c1c1c;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
@@ -27,10 +35,20 @@
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
 
-  --color-heading: var(--vt-c-indigo);
-  --color-text: var(--vt-c-indigo);
+  --color-heading: var(--got-iron);
+  --color-text: var(--got-iron-light);
 
   --section-gap: 160px;
+
+  /* Colores temáticos de Game of Thrones */
+  --color-accent: var(--got-gold);
+  --color-accent-dark: var(--got-gold-dark);
+  --color-text-strong: var(--got-iron);
+  --color-text-strong-dark: var(--got-silver);
+  --color-bg-overlay: rgba(212, 175, 55, 0.15);
+  --color-bg-overlay-dark: rgba(28, 28, 28, 0.9);
+  --color-title: var(--got-gold);
+  --color-title-dark: var(--got-silver);
 
   --color-background-dark: var(--vt-c-black);
   --color-background-soft-dark: var(--vt-c-black-soft);
@@ -39,8 +57,8 @@
   --color-border-dark: var(--vt-c-divider-dark-2);
   --color-border-hover-dark: var(--vt-c-divider-dark-1);
 
-  --color-heading-dark: var(--vt-c-white);
-  --color-text-dark: var(--vt-c-text-dark-2);
+  --color-heading-dark: var(--got-silver);
+  --color-text-dark: var(--got-silver-dark);
 
   color-scheme: light dark;
 }
@@ -64,8 +82,11 @@
 
 body {
   min-height: 100dvh;
-  color: light-dark(var(--color-text) var(--color-text-dark));
-  background: light-dark(var(--color-background) var(--color-background-dark));
+  color: light-dark(var(--color-text), var(--color-text-dark));
+  background: light-dark(
+    linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%),
+    linear-gradient(135deg, var(--got-night) 0%, var(--vt-c-black-soft) 100%)
+  );
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -83,8 +104,8 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

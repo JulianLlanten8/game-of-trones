@@ -3,14 +3,18 @@
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: light-dark(var(--got-gold), var(--got-silver));
   transition: 0.4s;
   padding: 3px;
+  font-weight: 500;
+  border-radius: 4px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: light-dark(rgba(212, 175, 55, 0.2), rgba(192, 192, 192, 0.2));
+    color: light-dark(var(--got-iron), var(--got-silver));
+    transform: translateY(-1px);
   }
 }
 
