@@ -1,6 +1,6 @@
 <template>
   <figure class="item">
-    <img :src="character.imageUrl" :alt="character.fullName" aspect-ratio="1/1" />
+    <img :src="character.imageUrl" :alt="character.fullName" aspect-ratio="4/5" />
     <figcaption>
 
       <h3>{{ character.fullName }}</h3>

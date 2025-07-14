@@ -2,7 +2,7 @@
   <article class="Box">
     <button class="Box__button">
       <h3 class="Box__title">
-        {{ group }}
+        {{ props.group }}
       </h3>
     </button>
   </article>
