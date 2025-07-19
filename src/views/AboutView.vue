@@ -1,19 +1,19 @@
 <template>
   <div class="about">
     <!-- Intro Animation -->
-    <div v-if="showIntro" class="intro-overlay" ref="introOverlay">
-      <div class="intro-content" ref="introContent">
-        <h1 class="intro-title" ref="introTitle">Winter is Coming</h1>
-        <p class="intro-subtitle" ref="introSubtitle">Enter the World of Westeros</p>
+    <div v-if="showIntro" ref="introOverlay" class="intro-overlay">
+      <div ref="introContent" class="intro-content">
+        <h1 ref="introTitle" class="intro-title">Winter is Coming</h1>
+        <p ref="introSubtitle" class="intro-subtitle">Enter the World of Westeros</p>
       </div>
     </div>
 
     <!-- Snow Animation Container -->
-    <div class="snow-container" ref="snowContainer"></div>
+    <div ref="snowContainer" class="snow-container" />
 
     <div class="hero-section">
       <h1 class="project-title">Game of Thrones Character Explorer</h1>
-      <h3 class="project-title"> Autor: </h3>
+      <h3 class="project-title">Autor:</h3>
       <h2 class="developer-name">Hugo Julian Llanten Idrobo</h2>
     </div>
 
@@ -21,23 +21,35 @@
       <section class="purpose">
         <h3>🎯 Propósito del Proyecto</h3>
         <p>
-          Este proyecto es una aplicación web interactiva que permite explorar y conocer a los personajes
-          del universo de Game of Thrones de una manera visual y dinámica. Utilizando tecnologías web modernas,
-          la aplicación ofrece una experiencia inmersiva para los fanáticos de la serie.
+          Este proyecto es una aplicación web interactiva que permite explorar y conocer a los
+          personajes del universo de Game of Thrones de una manera visual y dinámica. Utilizando
+          tecnologías web modernas, la aplicación ofrece una experiencia inmersiva para los
+          fanáticos de la serie.
         </p>
       </section>
 
       <section class="features">
         <h3>✨ Características Principales</h3>
         <ul>
-          <li><strong>Exploración de Personajes:</strong> Visualiza información detallada de los personajes principales
-            de Game of Thrones</li>
-          <li><strong>Organización por Casas:</strong> Los personajes están agrupados por sus respectivas casas nobles
-            (Stark, Lannister, Targaryen, etc.)</li>
-          <li><strong>Interfaz Inmersiva:</strong> Diseño temático que evoca el mundo de Westeros con animaciones
-            fluidas</li>
-          <li><strong>Responsive Design:</strong> Adaptable a diferentes dispositivos y tamaños de pantalla</li>
-          <li><strong>Carga Dinámica:</strong> Obtiene datos en tiempo real desde una API externa</li>
+          <li>
+            <strong>Exploración de Personajes:</strong> Visualiza información detallada de los
+            personajes principales de Game of Thrones
+          </li>
+          <li>
+            <strong>Organización por Casas:</strong> Los personajes están agrupados por sus
+            respectivas casas nobles (Stark, Lannister, Targaryen, etc.)
+          </li>
+          <li>
+            <strong>Interfaz Inmersiva:</strong> Diseño temático que evoca el mundo de Westeros con
+            animaciones fluidas
+          </li>
+          <li>
+            <strong>Responsive Design:</strong> Adaptable a diferentes dispositivos y tamaños de
+            pantalla
+          </li>
+          <li>
+            <strong>Carga Dinámica:</strong> Obtiene datos en tiempo real desde una API externa
+          </li>
         </ul>
       </section>
 
@@ -74,9 +86,9 @@
       <section class="api-info">
         <h3>🔗 Fuente de Datos</h3>
         <p>
-          La aplicación consume datos de la <strong>Thrones API</strong> (thronesapi.com),
-          que proporciona información completa sobre personajes, incluyendo imágenes,
-          nombres, afiliaciones familiares y otros detalles relevantes del universo de Game of Thrones.
+          La aplicación consume datos de la <strong>Thrones API</strong> (thronesapi.com), que
+          proporciona información completa sobre personajes, incluyendo imágenes, nombres,
+          afiliaciones familiares y otros detalles relevantes del universo de Game of Thrones.
         </p>
       </section>
 
@@ -84,8 +96,8 @@
         <h3>🎓 Objetivos de Aprendizaje</h3>
         <p>
           Este proyecto sirve como demostración de competencias en desarrollo frontend moderno,
-          incluyendo el manejo de APIs REST, gestión de estado, animaciones web, y mejores
-          prácticas en Vue.js. Es parte del portafolio de desarrollo de Hugo Julian Llanten Idrobo.
+          incluyendo el manejo de APIs REST, gestión de estado, animaciones web, y mejores prácticas
+          en Vue.js. Es parte del portafolio de desarrollo de Hugo Julian Llanten Idrobo.
         </p>
       </section>
     </div>
@@ -131,7 +143,8 @@ const createSnowflakes = () => {
     snowflakes.push(snowflake)
 
     // Animación de caída natural desde arriba hacia abajo
-    gsap.fromTo(snowflake,
+    gsap.fromTo(
+      snowflake,
       {
         y: -100,
         x: 0,
@@ -176,28 +189,41 @@ const playIntroAnimation = () => {
   })
 
   // Animación del título principal
-  tl.from(introTitle.value, {
-    opacity: 0,
-    y: 50,
-    scale: 0.8,
-    duration: 1.5,
-    ease: 'power2.out'
-  }, 0.5)
+  tl.from(
+    introTitle.value,
+    {
+      opacity: 0,
+      y: 50,
+      scale: 0.8,
+      duration: 1.5,
+      ease: 'power2.out'
+    },
+    0.5
+  )
 
   // Efecto de texto brillante
-  tl.to(introTitle.value, {
-    textShadow: '0 0 20px rgba(173, 216, 230, 0.8), 0 0 40px rgba(173, 216, 230, 0.6), 0 0 60px rgba(173, 216, 230, 0.4)',
-    duration: 1,
-    ease: 'power2.inOut'
-  }, 1)
+  tl.to(
+    introTitle.value,
+    {
+      textShadow:
+        '0 0 20px rgba(173, 216, 230, 0.8), 0 0 40px rgba(173, 216, 230, 0.6), 0 0 60px rgba(173, 216, 230, 0.4)',
+      duration: 1,
+      ease: 'power2.inOut'
+    },
+    1
+  )
 
   // Animación del subtítulo
-  tl.from(introSubtitle.value, {
-    opacity: 0,
-    y: 30,
-    duration: 1,
-    ease: 'power2.out'
-  }, 1.5)
+  tl.from(
+    introSubtitle.value,
+    {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      ease: 'power2.out'
+    },
+    1.5
+  )
 
   // Pausa dramática
   tl.to({}, { duration: 2 })
@@ -232,10 +258,12 @@ onMounted(async () => {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(20, 30, 50, 0.95) 50%,
-      rgba(0, 0, 0, 0.95) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(20, 30, 50, 0.95) 50%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,7 +325,10 @@ onMounted(async () => {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   position: relative;
   z-index: 2;
 }
@@ -429,7 +460,6 @@ li:last-child {
 
 /* Tema claro */
 @media (prefers-color-scheme: light) {
-
   p,
   li {
     color: rgba(0, 0, 0, 0.8);

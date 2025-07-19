@@ -1,5 +1,7 @@
 <template>
-  <h1 ref="titleEl" class="fire-text">{{ text }}</h1>
+  <h1 ref="titleEl" class="fire-text">
+    {{ text }}
+  </h1>
 </template>
 
 <script setup>
@@ -26,11 +28,10 @@ onMounted(() => {
       scale: 1,
       duration: 2,
       ease: 'power2.out',
-      textShadow: '0 0 10px var(255, 200, 100, 0.5), 0 0 20px rgba(255, 150, 50, 0.4), 0 0 30px rgba(255, 100, 0, 0.3)'
+      textShadow:
+        '0 0 10px var(255, 200, 100, 0.5), 0 0 20px rgba(255, 150, 50, 0.4), 0 0 30px rgba(255, 100, 0, 0.3)'
     }
   )
-
-
 })
 </script>
 
@@ -43,12 +44,7 @@ onMounted(() => {
   text-transform: uppercase;
 
   /* Fondo fuego animado */
-  background: linear-gradient(-45deg,
-      #f3ec78,
-      #af4261,
-      #dca444,
-      #f3ec78,
-      #af4261);
+  background: linear-gradient(-45deg, #f3ec78, #af4261, #dca444, #f3ec78, #af4261);
   background-size: 400% 400%;
   animation: fireGlow 6s ease-in-out infinite;
 

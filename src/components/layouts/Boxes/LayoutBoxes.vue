@@ -1,7 +1,6 @@
 <template>
   <section v-if="!loading">
-    <h2 class="title-family-groups">
-      Family Groups</h2>
+    <h2 class="title-family-groups">Family Groups</h2>
     <section class="family-groups">
       <FamilyGroup v-for="(value, houseName) in familyGroups" :key="houseName" :group="houseName" />
     </section>
@@ -14,7 +13,6 @@ import FamilyGroup from '@/components/layouts/Boxes/Box/FamilyBox.vue'
 
 const familyGroups = groupedByFamily
 </script>
-
 
 <style scoped>
 .family-groups {

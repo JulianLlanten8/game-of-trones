@@ -46,20 +46,31 @@ const props = defineProps({
   transition: 500ms;
   border-radius: 5px;
   background: linear-gradient(145deg, #2e2d2d, #212121);
-  box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
-    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  box-shadow:
+    -1px -5px 15px #41465b,
+    5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121,
+    inset -5px -5px 10px #212121;
 
   &:hover {
-    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
-    box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+    -webkit-box-shadow:
+      1px 1px 13px #20232e,
+      -1px -1px 13px #545b78;
+    box-shadow:
+      1px 1px 13px #20232e,
+      -1px -1px 13px #545b78;
     color: #d6d6d6;
     -webkit-transition: 500ms;
     transition: 500ms;
   }
 
   &:active {
-    -webkit-box-shadow: inset 1px 1px 13px #20232e, inset -1px -1px 13px #545b78;
-    box-shadow: inset 1px 1px 13px #20232e, inset -1px -1px 13px #545b78;
+    -webkit-box-shadow:
+      inset 1px 1px 13px #20232e,
+      inset -1px -1px 13px #545b78;
+    box-shadow:
+      inset 1px 1px 13px #20232e,
+      inset -1px -1px 13px #545b78;
     color: #d6d6d6;
     -webkit-transition: 500ms;
     transition: 500ms;

@@ -3,7 +3,9 @@
     <CharacterCard v-for="character in characters" :key="character.id" :character="character" />
   </section>
   <section v-else>
-    <p v-if="error" class="error">{{ error.message }}</p>
+    <p v-if="error" class="error">
+      {{ error.message }}
+    </p>
     <article v-else class="loading">
       <img src="@svgs/svg-spinners--pulse.svg" alt="Loading" />
       <p>Cargando personajes...</p>
@@ -12,25 +14,21 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue"
-import CharacterCard from './Characters/CharacterCard.vue';
-import {
-  error,
-  loading,
-  fetchCharacters
-} from '@api/gameOfThronesApi.js';
+import { onMounted, ref } from 'vue'
+import CharacterCard from './Characters/CharacterCard.vue'
+import { error, loading, fetchCharacters } from '@api/gameOfThronesApi.js'
 
-const characters = ref([]);
-
+const characters = ref([])
 
 onMounted(async () => {
   try {
-    characters.value = await fetchCharacters();
+    characters.value = await fetchCharacters()
   } catch (e) {
-    console.error('Error loading characters:', e);
+    error.value = e
+  } finally {
+    loading.value = false
   }
-});
-
+})
 </script>
 
 <style scoped>
