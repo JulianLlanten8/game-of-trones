@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { get } from './get.js'
+import { get } from '@api/get'
 
 const groupedByFamily = ref({})
 const error = ref(null)

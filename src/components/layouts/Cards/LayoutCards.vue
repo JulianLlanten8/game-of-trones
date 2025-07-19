@@ -18,7 +18,7 @@ import {
   error,
   loading,
   fetchCharacters
-} from '@/assets/api/gameOfThronesApi.js';
+} from '@api/gameOfThronesApi.js';
 
 const characters = ref([]);
 

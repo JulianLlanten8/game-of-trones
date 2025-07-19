@@ -3,6 +3,10 @@
     "paths": {
       "@/*": ["./src/*"],
       "@svgs/*": ["./src/components/svgs/*"],
+      "@components/*": ["./src/components/*"],
+      "@views/*": ["./src/views/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@api/*": ["./src/services/api/*"]
     },
     "target": "ESNext",
     "lib": ["ESNext", "DOM"]

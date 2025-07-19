@@ -9,8 +9,8 @@
 </template>
 
 <script setup>
-import { groupedByFamily, loading } from '@/assets/api/gameOfThronesApi.js'
-import FamilyGroup from '@/components/Main/Boxes/Box/FamilyBox.vue'
+import { groupedByFamily, loading } from '@api/gameOfThronesApi.js'
+import FamilyGroup from '@/components/layouts/Boxes/Box/FamilyBox.vue'
 
 const familyGroups = groupedByFamily
 </script>
